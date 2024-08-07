@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    /* height: 100vh; */
+    background-image: url("./assets/bgtravel.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+nav{
+    padding-block: 1rem;
+}
+
+.genLayout{
+    max-width: 1100px;
+    margin: auto;
+}
+.innerNav, .logoSide{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.logo>img{
+    width: 15px;
+    height: 25px;
+}
+.logo>h1{
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 1.5em;
+}
+.logoSide{
+    border-bottom: 1px solid #fff;
+    width: 750px;
+    padding-bottom: .6rem;
+}
+
+label, #toggle{
+    display: none;
+}
+.navItems{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navItems>a{
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.navItems>a:first-child{
+    font-weight: 600;
+}
+
+.navIcons{
+    display: flex;
+    gap: 1rem;
+}
+
+.navIcons>button{
+    padding: .4rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 12px;
+    color: #fff;
+}
+.navIcons>button:first-child{
+    background-color: #f8930f;
+}
+.navIcons>button:last-child{
+    background-color: #037673;
+}
+
+
+/* responsive code for nav bar */
+@media(min-width: 320px) and (max-width: 600px){
+    label{
+    display: block;
+    color: #fff;
+    font-size: 2rem;
+   }
+    
+   .navRight{
+    display: none;
+    height: 70vh;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 250px;
+    margin-top: 60px;
+    z-index: 1;
+    background-color: #347a93;
+    /* opacity: .; */
+    border-bottom: 4px solid #000;
+   }
+
+   .navItems{
+    flex-direction: column;
+    align-items: end;
+    gap: 3rem;
+    padding: 3rem 2rem 1rem;
+    width: 100%;
+  }
+
+  .navItems>a{
+    font-size: 18px;
+    display:block;
+  }
+
+  .genLayout {
+    width: calc(100% - 70px);
+  }
+
+  #toggle:checked + .navRight {
+    display: block;
+  }
+
+   .navIcons{
+    display: none;
+   }
+}
+
+/* styling for banner code */
+.bannerWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bannerContent{
+    width: 40%;
+}
+
+.bannerImg{
+    width: 50%;
+    height: 70vh;
+}
+
+.badge{
+    background-color: #fff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50px;
+    padding: .3rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.badge>span{
+    background-color: #f8930f;
+    border-radius: 100%;
+    padding: .2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.badge>span>i{
+    color: #fff;
+    font-size: 12px;
+}
+
+.bannerContent>h1{
+    color: #fff;
+    margin-block: 1rem;
+    font-size: 3rem;
+}
+
+.bannerContent>p{
+    color: #fff;
+    width: 350px;
+}
+
+.bannerImg>img{
+    height: 100%;
+    width: 100%;
+}
+
+/* responsive code for banner */
+@media(min-width: 320px) and (max-width: 600px){
+    .bannerWrapper{
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .bannerContent{
+        width: 100%;
+    }
+    .bannerContent>h1{
+        font-size: 2rem;
+    }
+    .bannerContent>p{
+        width: 100%;
+    }
+
+    .bannerImg{
+        width: 100%;
+        height: 100%;
+    }
+
+}
